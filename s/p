@@ -9,4 +9,4 @@ git commit -m "$*"
 
 git push https://pythonideas:$GITHUB_PUSH_TOKEN@github.com/pythonideas/builder main
 
-git push https://rustbotchessapp:$GITLAB_PUSH_TOKEN@gitlab.com/rustbochessapp/builder main
+git push https://rustbotchessapp:$GITLAB_PUSH_TOKEN@gitlab.com/rustbotchessapp/builder main
