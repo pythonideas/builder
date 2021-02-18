@@ -1,22 +1,27 @@
 const { watch } = require('fs')
 const child_process = require('child_process')
+const chalk = require('chalk')
 
 function spawnSync(command, args){
-    console.log("spawn sync", command, args)
+    console.log(chalk.blue(command), args, chalk.yellow(new Date().toLocaleString()))
     
     const result = child_process.spawnSync(command, args)
     
-    console.log(`stdout ${result.stdout}`)
-    console.log(`stderr ${result.stderr}`)
-    console.log(`status ${result.status}`)
+    console.log(chalk.green(`${result.stdout}`))
+    console.log(chalk.red(`${result.stderr}`))
+    console.log(chalk.blue(`status ${result.status}`))
 }
 
-watch("src", (event, filename) => {
-    console.log("src", event, filename)
-    
-    spawnSync("npm", ["run", "compile"])
-})
+function watchAll(names, callback){
+    for(const name of names){
+        watch(name, (event, filename) => {
+            console.log(chalk.magenta(event), chalk.blue(filename), chalk.yellow(new Date().toLocaleString()))
 
-watch("dist", (event, filename) => {
-    console.log("dist", event, filename)
-})
+            callback()
+        })
+    }
+}
+
+watchAll(["src"], _ => spawnSync("npm", ["run", "compile"]))
+
+watchAll(["dist"], _ => {})

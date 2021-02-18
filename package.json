@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/pythonideas/builder#readme",
   "devDependencies": {
+    "chalk": "^4.1.0",
     "typescript": "^4.1.5"
   }
 }
