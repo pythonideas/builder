@@ -3,6 +3,8 @@
 git config --global user.email "rustbochessapp@gmail.com"
 git config --global user.name "Rustbot Chessapp"
 
+npm run prettier
+
 git add .
 
 git commit -m "$*"
