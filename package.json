@@ -1,0 +1,26 @@
+{
+  "name": "builder",
+  "version": "1.0.0",
+  "description": "builder",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "npx tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pythonideas/builder.git"
+  },
+  "keywords": [
+    "builder"
+  ],
+  "author": "Rustbot Chessapp",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pythonideas/builder/issues"
+  },
+  "homepage": "https://github.com/pythonideas/builder#readme",
+  "devDependencies": {
+    "typescript": "^4.1.5"
+  }
+}
