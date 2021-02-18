@@ -7,6 +7,8 @@ git add .
 
 git commit -m "$*"
 
+echo "Press ENTER to push. Ctrl+C to abort."
+
 read input
 
 git push https://pythonideas:$GITHUB_PUSH_TOKEN@github.com/pythonideas/builder main
