@@ -7,6 +7,8 @@ git add .
 
 git commit -m "$*"
 
+read input
+
 git push https://pythonideas:$GITHUB_PUSH_TOKEN@github.com/pythonideas/builder main
 
 git push https://rustbotchessapp:$GITLAB_PUSH_TOKEN@gitlab.com/rustbotchessapp/builder main
